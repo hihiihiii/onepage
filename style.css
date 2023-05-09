@@ -1,4 +1,4 @@
-body,
+body,ul,
 h1 {
     margin: 0;
     padding: 0;
@@ -15,23 +15,44 @@ h6 {
     font-weight: inherit;
 }
 
+li{
+    list-style-type: none;
+}
+
 img {
     vertical-align: top;
 }
 
+a{
+    color: inherit;
+    text-decoration: inherit;
+}
+
+:root{
+    scroll-behavior: smooth;
+}
+
 /* Variables */
 :root {
-    
+    font-size: 10px;
+    font-family: "arial";
+    line-height: 1.44;
+}
+
+
+/* Typography */
+body{
+    font-size: 1.6rem;
 }
 
 .header {
     position: relative;
-    overflow: hidden;
+    overflow: hidden; 
+    color: orange;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 400px;
-    color: orange;
+    height: 40vw;
 }
 
 .header-background {
@@ -44,12 +65,100 @@ img {
     z-index: -1;
 }
 
-.header-title {
-    background-color: dodgerblue
+.header-title strong {
+    color: orangered;
 }
 
-/* .l_wrapper{
-    max-width: 960px;
+.header-title {
+    font-size: clamp(1.6rem, 10vw, 10rem);
+    font-family: "impact";
+    line-height: 1;
+}
+
+.l_wrapper{
+    max-width: 1200px;
     margin: 0 auto;
-    box-shadow: inset  0 0 30px red;
-} */
+    padding: 0 40px;
+}
+
+.container{    
+    margin: 40px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.container-sidebar {
+    flex-basis: 240px;
+    flex-shrink: 0;
+    position: sticky;
+    left: 0;
+    top: 0;
+    
+}
+
+.container-contents {
+    min-width: 0;
+    flex-grow: 1;    
+    padding-bottom: 20vh;
+    
+}
+
+
+/* sidebar */
+.sidebar{
+    padding: 40px 0px;
+    
+}
+
+.sidebar-logo{
+    background-image: url("img/emacs-icon.png");
+    width: 100px;
+    height: 100px;
+    display: block;
+    text-indent: -9999px;
+
+}
+
+.sidebar-menu{
+    font-size: 3.4rem;
+    margin: 20px 0px;
+    line-height: 1.44;
+    color: rebeccapurple;
+}
+
+.sidebarbar-footer{
+
+}
+
+
+.section{
+    padding-top: 40px;
+}
+
+.section-title{
+    font-size: 4rem;
+    line-height: 1;
+    font-weight: bold;
+    color: #aaa;
+}
+
+.section-contents{
+    background-color: #efefef;
+    padding: 40px;
+    border-radius: 10px 10px 40px 10px;
+    min-height: 80vh;
+}
+
+.grid{
+    background-color: gold;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.grid li {
+    flex-grow: 1;
+    flex-basis: 240px;
+    background-color: red;
+}
